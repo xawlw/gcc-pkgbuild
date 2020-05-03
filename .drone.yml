@@ -12,8 +12,8 @@ steps:
     - setfacl -d --set u::rwx,g::rwx,o::r build
     - ls
     - pacman -Sy --noconfirm binutils sudo grep fakeroot file
-    - pacman -S --noconfirm libmpc gcc-ada doxygen lib32-glibc lib32-gcc-libs python git dejagnu inetutils
-    - ls
+    - pacman -S --noconfirm libmpc gcc-ada doxygen lib32-glibc lib32-gcc-libs python git dejagnu inetutils patch base-devel neofetch
+    - neofetch
     - mv PKGBUILD build/
     - mv c89 build/
     - mv c99 build/

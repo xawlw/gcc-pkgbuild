@@ -12,7 +12,7 @@ steps:
     - setfacl -d --set u::rwx,g::rwx,o::r build
     - ls
     - pacman -Sy --noconfirm binutils sudo grep fakeroot file
-    - pacman -S --noconfirm upower
+    - pacman -S --noconfirm libmpc gcc-ada doxygen lib32-glibc lib32-gcc-libs python git dejagnu inetutils
     - mv PKGBUILD build/
     - pushd build
     - sudo -u nobody makepkg -c

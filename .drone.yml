@@ -13,7 +13,14 @@ steps:
     - ls
     - pacman -Sy --noconfirm binutils sudo grep fakeroot file
     - pacman -S --noconfirm libmpc gcc-ada doxygen lib32-glibc lib32-gcc-libs python git dejagnu inetutils
+    - ls
     - mv PKGBUILD build/
+    - mv c89 build/
+    - mv c99 build/
+    - mv fs64270.patch build/
+    - mv gdc_artificial_decl.patch build/
+    - mv gdc_phobos_path.patch build/
+    - mv gdc_thunk_weak_ref.patch build/
     - pushd build
     - sudo -u nobody makepkg -c
     - ls -la

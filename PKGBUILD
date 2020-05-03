@@ -82,7 +82,7 @@ build() {
       --libexecdir=/usr/lib \
       --mandir=/usr/share/man \
       --infodir=/usr/share/info \
-      --with-pkgversion="Arch Linux $pkgver-$pkgrel" \
+      --with-pkgversion="xawlw's gcc $pkgver-$pkgrel" \
       --with-bugurl=https://bugs.archlinux.org/ \
       --enable-languages=c,c++,ada,fortran,go,lto,objc,obj-c++,d \
       --enable-shared \
@@ -107,6 +107,9 @@ build() {
       --enable-default-pie \
       --enable-default-ssp \
       --enable-cet=auto \
+      --with-arch=skylake \
+      --with-tune=skylake \
+      --enable-graphite \
       gdc_include_dir=/usr/include/dlang/gdc
 
   make
